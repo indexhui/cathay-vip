@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Cathay VIP</title>
+<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+<!-- HEADER START -->
+<div class="header">
+    <div class="navbar navbar-light" role="navigation">
+        <div class="container">
+            <a class="navbar-logo" href="/">
+                <img src="/src/images/logo.png" alt="國泰人壽logo" />
+            </a>
+            {{#if loggedIn}}
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a>Your Name</a>
+                </li>
+                <li>
+                    <a href="#/logout">Logout</a>
+                </li>
+            </ul>
+            {{else}}
+                {{#unless noLogin}}
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="btn btn-sub" href="/login">Login</a>
+                    </li>
+                </ul>
+                {{/unless}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+<!-- HEADER END -->

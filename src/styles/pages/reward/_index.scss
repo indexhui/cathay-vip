@@ -1,0 +1,87 @@
+.reward-title {
+  h2 {
+    margin: 1em 0;
+  }
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .reward-listing :nth-child(2n+1) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
+  .reward-listing :nth-child(3n+1) {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .reward-listing :nth-child(4n+1) {
+    clear: left;
+  }
+}
+
+.reward-item {
+  margin-bottom: 1em;
+
+}
+
+.reward-item-img {
+  position: relative;
+  text-decoration: none;
+  background: $dark-green;
+  display: block;
+
+  img {
+    transition: opacity 0.5s ease;
+  }
+
+  &:hover{
+    &:after {
+      content: 'Order Now';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.5em 1em;
+      border: 1px solid white;
+      color: white;
+    }
+    img {
+      opacity: 0.2;
+      transition: opacity 0.5s ease;
+    }
+  }
+}
+
+.reward-item-name {
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+.reward-item-name-wrapper {
+  width: 100%;
+
+  .reward-item-action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.2em 1em;
+    background: #868686;
+    color: white;
+    text-decoration: none;
+    transition: background 0.5s ease;
+  }
+  .reward-item-action:hover {
+    background: #121C1C;
+    transition: background 0.5s ease;
+  }
+}
+
+.reward-footer {
+  margin-top: 2em;
+}

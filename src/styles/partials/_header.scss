@@ -1,0 +1,43 @@
+$grid-float-breakpoint: 1px;
+
+.header {
+  margin-bottom: 10px;
+}
+
+.navbar {
+  padding: 1em 0;
+  border-radius: 0;
+}
+
+.navbar-light {
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.navbar-nav > li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: 0 !important;
+}
+
+.navbar-logo {
+  font-size: 1em;
+
+  img {
+    height: 3em;
+    width: auto;
+  }
+}
+
+.navbar-nav {
+  li {
+    font-size: 1em;
+    a.btn {
+      padding: 6px 12px;
+    }
+  }
+}
+

@@ -1,0 +1,384 @@
+{{> ../../partials/header loggedIn=true}}
+<div class="container">
+  <ul class="breadcumb">
+    <li><a href="/reward/hotel">V.I.P 住宿兌換</a></li>
+    <li>店家＆優惠介紹</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="reward-stepper">
+        <div class="current reward-step">
+          <div class="reward-step-id">
+            <h2>STEP-3</h2>
+          </div>
+          <div class="reward-step-name">
+            <h3>填寫預約資料</h3>
+          </div>
+        </div>
+        <div class="reward-step">
+          <div class="reward-step-id">
+            <h2>STEP-4</h2>
+          </div>
+          <div class="reward-step-name">
+            <h3>確認預約資料</h3>
+          </div>
+        </div>
+        <div class="reward-step">
+          <div class="reward-step-id">
+            <h2>STEP-5</h2>
+          </div>
+          <div class="reward-step-name">
+            <h3>完成預約</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9 col-sm-offset-1">
+      <div class="reward-detail">
+        <form class="reward-data form-horizontal">
+          <div class="reward-section-title">
+            <h3>會員基本資料</h3>
+          </div>
+          <!-- 自動帶入會員資料 -->
+          <!-- 且每次送出之後，同步更新回去資料庫 -->
+          <div class="form-group">
+            <label for="member-name" class="col-sm-2 control-label">姓名：</label>
+            <div class="col-sm-10">
+              <input id="member-name" class="form-control" type="text" value="自動跟會員資料同步更新">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="member-email" class="col-sm-2 control-label">信箱：</label>
+            <div class="col-sm-10">
+              <input id="member-email" class="form-control" type="text" value="自動跟會員資料同步更新">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="member-phone" class="col-sm-2 control-label">手機：</label>
+            <div class="col-sm-10">
+              <input id="member-phone" class="form-control" type="text" value="自動跟會員資料同步更新">
+            </div>
+          </div>
+          <div class="reward-section-title">
+            <h3>填寫預約資訊</h3>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <!-- onClick 將上方member data帶入下方user data -->
+              <div class="checkbox">
+                <label><input id="link-data" type="checkbox">同會員資料</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-name" class="col-sm-2 control-label">姓名：</label>
+            <div class="col-sm-10">
+              <input id="user-name" class="form-control" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-phone" class="col-sm-2 control-label">手機：</label>
+            <div class="col-sm-10">
+              <input id="user-phone" class="form-control" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-relation" class="col-sm-2 control-label">關係：</label>
+            <div class="col-sm-10">
+              <!-- 資料內容待國壽確認 -->
+              <select id="user-relation" class="form-control">
+                <option value="1">本人</option>
+                <option value="2">家人</option>
+                <option value="3">家人</option>
+                <option value="4">家人</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reservation-date" class="col-sm-12 control-label">預約日期：</label>
+          </div>
+          <div class="reward-data-calender text-center">
+            <div class="month-nav row calendar-row">
+              <div class="calendar-col-1">
+                <button class="btn btn-transparent">
+                  <span class="glyphicon glyphicon-triangle-left"></span>
+                  <span>09月</span>
+                </button>
+              </div>
+              <div class="calendar-col-5 hidden-xs">
+                <span>2016年10月</span>
+              </div>
+              <div class="calendar-col-1 hidden-xs">
+                <button class="btn btn-transparent">
+                  <span>11月</span>
+                  <span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+              </div>
+            </div>
+            <div class="row calendar-row hidden-xs">
+              <div class="weekday-th calendar-col-1">Sun</div>
+              <div class="weekday-th calendar-col-1">Mon</div>
+              <div class="weekday-th calendar-col-1">Tue</div>
+              <div class="weekday-th calendar-col-1">Wed</div>
+              <div class="weekday-th calendar-col-1">Thu</div>
+              <div class="weekday-th calendar-col-1">Fri</div>
+              <div class="weekday-th calendar-col-1">Sat</div>
+            </div>
+            <div class="row calendar-row">
+              <!-- 需算出第一周的開頭要補幾格，加上hidden-xs標籤，手機版會藏起來 -->
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <!-- visible-xs標籤，只會在手機版時顯示 -->
+              <!-- 本月過去的日子，加上.past -->
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>01<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>02<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>03<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>04<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>05<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>06<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>07<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>08<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>09<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>10<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>11<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>12<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>13<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>14<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>15<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>16<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>17<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day past">
+                  <div class="date"><span class="visible-xs">10月</span>18<span class="visible-xs">日</span></div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>19<span class="visible-xs">日</span></div>
+                  <!-- 今天以後的日子，加上reservation區塊 -->
+                  <div class="reservation">
+                    <!-- onClick，加上 .active -->
+                    <!-- 其他日子onClick，移除 .active -->
+                    <button class="btn btn-calendar btn-square btn-main active">已選擇</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>20<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button class="btn btn-calendar btn-square btn-main">可預約</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>21<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button class="btn btn-calendar btn-square btn-main">可預約</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>22<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>23<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>24<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>25<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>26<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>27<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>28<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button disabled class="btn btn-calendar btn-square btn-main">已額滿</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>29<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button class="btn btn-calendar btn-square btn-main">可預約</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>30<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button class="btn btn-calendar btn-square btn-main">可預約</button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-col-1">
+                <div class="day">
+                  <div class="date"><span class="visible-xs">10月</span>31<span class="visible-xs">日</span></div>
+                  <div class="reservation">
+                    <button class="btn btn-calendar btn-square btn-main">可預約</button>
+                  </div>
+                </div>
+              </div>
+              <!-- 需算出最後一周的結尾要補幾格，加上hidden-xs標籤，手機版會藏起來 -->
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+              <div class="hidden-xs calendar-col-1">
+                <div class="day"></div>
+              </div>
+            </div>
+            <!-- 結尾nav，供手機版使用 -->
+            <!-- 跟開頭的nav一樣，不過只留下個月的那部分 -->
+            <div class="month-nav row calendar-row visible-xs">
+              <div class="calendar-col-1">
+                <button class="btn btn-transparent">
+                  <span>11月</span>
+                  <span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="reward-action text-center">
+          <a class="btn btn-square btn-main btn-wide" href="./step4.html">下一步</a>
+          <a class="btn btn-square btn-sub btn-wide" href="./">取消</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{> ../../partials/footer}}

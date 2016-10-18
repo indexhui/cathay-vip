@@ -1,0 +1,87 @@
+
+.reward-data-calender {
+  $cal-col-base: 14.2857143%;
+  @for $i from 1 through 7 {
+    .calendar-col-#{$i} {
+      @media screen and (min-width: $screen-sm) {
+        width: $cal-col-base * $i;
+        float: left;
+      }
+      position: relative;
+      min-height: 1px;
+    }
+  }
+
+  .calendar-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .month-nav {
+    font-size: 1.2em;
+    line-height: 2em;
+    padding: 1em 0;
+  }
+
+  .weekday-th {
+    background: $dark-green;
+    padding: 0.5em 0;
+    color: white;
+  }
+
+  .day {
+    width: 100%;
+    text-align: center;
+    border: 1px solid $light-gray;
+
+    .date {
+      padding: 1em 0;
+      display: inline-block;
+      .visible-xs {
+        display: inline !important;
+      }
+    }
+
+    .reservation {
+      display: inline-block;
+    }
+
+    .btn-calendar {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.past {
+      .date {
+        color: $light-gray;
+      }
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      float: left;
+      padding-top: 80%;
+      position: relative;
+
+      .date {
+        position: absolute;
+        display: block;
+        top: 0;
+        width: 100%;
+        height: 50%;
+        .visible-xs {
+          display: none !important;
+        }
+      }
+
+      .reservation {
+        position: absolute;
+        display: block;
+        top: 50%;
+        width: 100%;
+        height: 50%;
+      }
+    }
+  }
+
+
+}

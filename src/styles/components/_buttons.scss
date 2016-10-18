@@ -1,0 +1,65 @@
+.btn {
+  transition: color 0.5s ease,
+    background 0.5s ease,
+    border 0.5s ease;
+}
+
+.btn-square {
+  border-radius: 0 !important;
+}
+
+.btn-wide {
+  width: 200px;
+}
+
+.btn-full-width {
+  width: 100%;
+}
+
+.btn-sub {
+  background: $light-gray;
+  color: $dark-green;
+  &:hover, &:focus {
+    background: $light-gray;
+    color: $dark-green;
+  }
+}
+
+.btn-main {
+  background: $light-green;
+  color: white;
+  border: none;
+
+  &:hover, &:focus, &.active {
+    color: white;
+    background: $gray;
+  }
+  &.active {
+    box-shadow: none;
+    background: $dark-green;
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+  &[disabled] {
+    background: $light-gray;
+    color: $light-green;
+    &:hover, &:focus {
+      background: $light-gray;
+      color: $light-green;
+    }
+  }
+}
+
+.btn-transparent {
+  background: transparent !important;
+  border: transparent !important;
+  color: black;
+
+  &:hover, &:focus, &.active {
+    background: transparent !important;
+    border: transparent !important;
+    color: $gray;
+  }
+}
+

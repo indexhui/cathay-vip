@@ -1,0 +1,37 @@
+.login-wrapper {
+	max-width: 480px;
+	margin: 0 auto 4em;
+	padding: 0 0.5em;
+}
+
+.login-header {
+	padding: 2em 0;
+}
+
+.combodate {
+	select {
+		@extend .form-control;
+		&.year {
+			width: 100% !important;
+			display: block;
+		}
+		&.month, &.day {
+			width: 48% !important;
+			display: inline-block;
+			margin-top: 15px;
+		}
+		&.day {
+			margin-left: 4%;
+		}
+		@media screen and (min-width: $screen-sm) {
+			&.year, &.month, &.day {
+				width: 30% !important;
+				display: inline-block;
+			}
+			&.month, &.day {
+				margin-top: 0;
+				margin-left: 5%;
+			}
+		}
+	}
+}

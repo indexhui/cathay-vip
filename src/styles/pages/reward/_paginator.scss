@@ -1,0 +1,54 @@
+.reward-paginator {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  float: right;
+
+  .paginator {
+    color: $gray;
+    cursor: pointer;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: black;
+    }
+
+    &.current {
+      color: black;
+    }
+  }
+
+  .paginator-arrow  {
+    color: $light-gray;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    vertical-align: text-top;
+
+    &.paginator-active {
+      color: $gray;
+
+      &.hover {
+        color: black;
+      }
+    }
+  }
+
+  .paginator-prev {
+    margin-right: 1em;
+  }
+
+  .paginator-next {
+    margin-left: 1em;
+  }
+
+  .paginator + .paginator:before {
+    content: '/';
+    padding: 0 1em;
+  }
+
+}
+
+@media screen and (min-width: $screen-sm) {
+  .reward-paginator {
+
+  }
+}
