@@ -1,0 +1,48 @@
+<div class="margin-top-large">
+  <h3>安全座椅與行李</h3>
+</div>
+<div class="form-group">
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="baby-seat" label="嬰兒座椅數(0-1歲或體重未達10Kg)"}}
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="safe-seat" label="安全座椅數(1-4歲或體重在10~18Kg以下)"}}
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="higher-seat" label="增高坐墊數"}}
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="luggage-count" label="行李件數(21-29吋行李)"}}
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="special-luggage" label="特殊行李件數"}}
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    {{/form/dropdown}}
+    {{>form/note note="請於特殊說明詳述您的特殊行李尺寸，如遇接送當日您的特殊行李尺寸過大，造成無法運送情事，本公司將保有最終派車權。"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="special-luggage-detail" label="輸入特殊尺寸敘述"}}
+  </div>
+</div>

@@ -17,10 +17,10 @@
 }
 
 .btn-sub {
-  background: $light-gray;
+  background: $gray;
   color: $dark-green;
   &:hover, &:focus {
-    background: $light-gray;
+    background: $gray;
     color: $dark-green;
   }
 }
@@ -32,7 +32,7 @@
 
   &:hover, &:focus, &.active {
     color: white;
-    background: $gray;
+    background: $dark-gray;
   }
   &.active {
     box-shadow: none;
@@ -59,7 +59,7 @@
   &:hover, &:focus, &.active {
     background: transparent !important;
     border: transparent !important;
-    color: $gray;
+    color: $dark-gray;
   }
 }
 

@@ -1,0 +1,16 @@
+<div class="reward-stepper-wrapper">
+  <div class="reward-stepper">
+    <div class="container">
+      {{#each (stepper name=name current=step)}}
+        <div class="reward-step">
+          <a class="reward-step-id {{this.current}} {{this.linkable}}" href="{{this.link}}">
+            <h2>{{this.id}}</h2>
+          </a>
+          <div class="reward-step-name">
+            <p>{{this.name}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

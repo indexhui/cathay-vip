@@ -1,6 +1,6 @@
 
 .reward-data-calender {
-  $cal-col-base: 14.2857143%;
+  $cal-col-base: 100% / 7;
   @for $i from 1 through 7 {
     .calendar-col-#{$i} {
       @media screen and (min-width: $screen-sm) {
@@ -59,7 +59,7 @@
 
     @media screen and (min-width: $screen-sm) {
       float: left;
-      padding-top: 80%;
+      padding-top: 60%;
       position: relative;
 
       .date {

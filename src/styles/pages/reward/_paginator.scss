@@ -1,7 +1,7 @@
 .reward-paginator {
   font-size: 1.2em;
+  text-align: center;
   margin-bottom: 2em;
-  float: right;
 
   .paginator {
     color: $gray;
@@ -47,8 +47,3 @@
 
 }
 
-@media screen and (min-width: $screen-sm) {
-  .reward-paginator {
-
-  }
-}

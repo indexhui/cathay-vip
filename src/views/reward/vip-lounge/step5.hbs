@@ -1,0 +1,17 @@
+{{> ../../partials/header loggedIn=true}}
+{{> ../components/stepper name="服務" step=5}}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="reward-detail margin-top-extra">
+        {{> ../components/phoneValidation}}
+        {{> ../components/confirmMemberData}}
+        {{> ../components/confirmReservationData type="lounge"}}
+      </div>
+      
+      {{> ../components/finishNav}}
+      
+    </div>
+  </div>
+</div>
+{{> ../../partials/footer}}

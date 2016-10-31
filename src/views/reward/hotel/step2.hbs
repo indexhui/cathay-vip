@@ -1,47 +1,9 @@
 {{> ../../partials/header loggedIn=true}}
+{{> ../components/stepper name="飯店" step=2}}
+
 <div class="container">
-  <ul class="breadcumb">
-    <li><a href="/reward/hotel">V.I.P 住宿兌換</a></li>
-    <li>店家＆優惠介紹</li>
-  </ul>
   <div class="row">
-    <div class="col-sm-2">
-      <div class="reward-stepper">
-        <div class="current reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-2</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>預約注意事項</h3>
-          </div>
-        </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-3</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>填寫預約資料</h3>
-          </div>
-        </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-4</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>確認預約資料</h3>
-          </div>
-        </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-5</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>完成預約</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-9 col-sm-offset-1">
+    <div class="col-xs-12">
       <div class="reward-detail">
         <div class="reward-notes">
           <h3>使用條件及方式</h3>
@@ -116,8 +78,11 @@
             </ol>
           </div>
         </div>
-        <div class="reward-action text-right">
+        <div class="text-center">
           <label class="reward-action-checkbox"><input type="checkbox">我同意以上服務事項條款，並盡到權利與義務。</label>
+        </div>
+        <div class="reward-action text-center">
+          
           <a class="btn btn-square btn-main btn-wide" href="./step3.html">下一步</a>
           <a class="btn btn-square btn-sub btn-wide" href="./">取消</a>
         </div>

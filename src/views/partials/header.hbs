@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <title>Cathay VIP</title>
 <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <div class="navbar navbar-light" role="navigation">
         <div class="container">
             <a class="navbar-logo" href="/">
-                <img src="/src/images/logo.png" alt="國泰人壽logo" />
+                <img src="/images/logo.png" alt="國泰人壽logo" />
             </a>
             {{#if loggedIn}}
             <ul class="nav navbar-nav navbar-right">
@@ -21,17 +22,9 @@
                     <a>Your Name</a>
                 </li>
                 <li>
-                    <a href="#/logout">Logout</a>
+                    <a href="/logout/">Logout</a>
                 </li>
             </ul>
-            {{else}}
-                {{#unless noLogin}}
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="btn btn-sub" href="/login">Login</a>
-                    </li>
-                </ul>
-                {{/unless}}
             {{/if}}
         </div>
     </div>

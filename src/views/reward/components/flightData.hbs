@@ -1,0 +1,37 @@
+<div class="margin-top-large">
+  <h3>航班與接送資料</h3>
+</div>
+<div class="form-group">
+  <div class="col-xs-12 col-sm-4">
+    {{>form/datetimepicker id="flight-date" label="航班時間"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="airport" label="接送機場"}}
+      <option>桃園機場 - 第一航廈</option>
+      <option>桃園機場 - 第二航廈</option>
+      <option>高雄小港</option>
+      <option>台中清泉崗</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="flight-number" label="航班編號"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/datetimepicker id="pick-date" label="指定接送時間"}}
+    {{>form/note note="貴賓請注意：指定日期時間為您上車的時間，非航班時間。提醒您若搭乘凌晨班機，須提早到機場，請注意指定日期與航班日期是否有跨日，請填寫正確之指定日期搭車。"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="car-type" label="指定車型"}}
+      <option>不指定</option>
+      <option>四人座車</option>
+      <option>七人座車</option>
+    {{/form/dropdown}}
+    {{>form/note note="不指定車型，原則上以四人座車安排，惟當日調度情形，肯驛國際保有以七人座代替四人座車調度權。"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="pet" label="是否攜帶寵物"}}
+      <option>無寵物</option>
+      <option>有寵物</option>
+    {{/form/dropdown}}
+  </div>
+</div>

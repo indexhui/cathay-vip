@@ -11,21 +11,18 @@
   }
 }
 
-@media screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
+@media screen and (min-width: $screen-md) {
   .reward-listing :nth-child(3n+1) {
     clear: left;
   }
 }
 
-@media screen and (min-width: $screen-lg) {
-  .reward-listing :nth-child(4n+1) {
-    clear: left;
-  }
+.reward-item {
+  margin-bottom: 2em;
 }
 
-.reward-item {
-  margin-bottom: 1em;
-
+.reward-item-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .reward-item-img {
@@ -59,8 +56,13 @@
 
 .reward-item-name {
   padding: 0.5em 0;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 2em;
+  font-weight: 600;
+}
+
+.reward-item-description {
+  padding: 1em;
 }
 
 .reward-item-name-wrapper {
@@ -85,3 +87,4 @@
 .reward-footer {
   margin-top: 2em;
 }
+

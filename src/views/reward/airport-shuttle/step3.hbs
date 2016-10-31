@@ -1,0 +1,28 @@
+{{> ../../partials/header loggedIn=true}}
+{{> ../components/stepper name="服務" step=3}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="reward-detail margin-top-extra">
+        <form class="reward-data form-horizontal">
+          {{> ../components/memberData}}
+
+          {{> ../components/reserverData}}
+
+          {{> ../components/addrData}}
+
+          {{> ../components/flightData}}
+
+          {{> ../components/moreData}}
+        </form>
+        <div class="reward-action text-center">
+          <a class="btn btn-square btn-main btn-wide" href="./step4.html">下一步</a>
+          <a class="btn btn-square btn-sub btn-wide" href="./">取消</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{> ../../partials/footer}}

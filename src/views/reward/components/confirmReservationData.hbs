@@ -1,0 +1,10 @@
+<h3>確認預約資料</h3>
+<div class="reward-detail-highlight text-left">
+	{{#each (dataConfirm type=type)}}
+		{{#if this}}
+			{{>form/confirm data=this.data label=this.label value=this.value}}
+		{{else}}
+			<br>
+		{{/if}}
+	{{/each}}
+</div>

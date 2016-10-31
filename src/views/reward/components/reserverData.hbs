@@ -1,0 +1,20 @@
+<div class="margin-top-large">
+  <h3>填寫預約資訊</h3>
+</div>
+<div class="form-group">
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="user-name" label="姓名"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="user-phone" label="手機"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="user-relation" label="關係"}}
+      <option value="1">本人</option>
+      <option value="2">家人</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12">
+    {{>form/checkbox id="user-same" label="同會員資料"}}
+  </div>
+</div>

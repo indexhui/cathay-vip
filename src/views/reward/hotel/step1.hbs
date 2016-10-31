@@ -1,66 +1,24 @@
 {{> ../../partials/header loggedIn=true}}
-<div class="container">
-  <ul class="breadcumb">
-    <li><a href="/reward/hotel">V.I.P 住宿兌換</a></li>
-    <li>店家＆優惠介紹</li>
-  </ul>
-  <div class="row">
-    <div class="col-sm-2">
-      <div class="reward-stepper">
-        <div class="current reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-1</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>飯店介紹</h3>
-          </div>
+
+{{> ../components/stepper name="飯店" step=1}}
+
+<div class="reward-detail">
+  <div class="reward-detail-img">
+    <img src="https://placehold.it/1000X500" alt="logo">
+  </div>
+  <div class="reward-detail-description">
+    <h2>Introduction</h2>
+    <p>本飯店將其儒風意象化為設計元素，相信『現代且雋永』，館內裝潢設計處處可見中西融合與經典現代的巧思，運用閩式建築特色妝點空間，書院收藏著老讀物，大廳兩旁的鼓藝是呼應千百年來禮樂相傳的敬意，隱身其中的文創藝術有著溫和的態度，走入飯店，皆是藏於細節中的心意。</p>
+    <p>秉持著與在地共生共榮的品牌精神，將溫厚的歷史氛圍與書院文化融於旅宿空間之中，謹以『文風再現‧創藝傳承』作為使命，承襲府城首學的風範與驕傲，感念舊世代的智慧，期許在新時代的文化裡共同努力，為旅人們創造豐富、滿足的住宿體驗！</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="reward-detail-note">
+          <p>優 惠 期 間：</p><p>2016年01月01日至2016年12月31日</p>
         </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-2</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>預約注意事項</h3>
-          </div>
-        </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-3</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>填寫預約資料</h3>
-          </div>
-        </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-4</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>確認預約資料</h3>
-          </div>
-        </div>
-        <div class="reward-step">
-          <div class="reward-step-id">
-            <h2>STEP-5</h2>
-          </div>
-          <div class="reward-step-name">
-            <h3>完成預約</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-9 col-sm-offset-1">
-      <div class="reward-detail">
-        <div class="reward-detail-img">
-          <img src="https://placehold.it/1000X300" alt="logo">
-        </div>
-        <div class="reward-detail-description">
-          <p>本飯店將其儒風意象化為設計元素，相信『現代且雋永』，館內裝潢設計處處可見中西融合與經典現代的巧思，運用閩式建築特色妝點空間，書院收藏著老讀物，大廳兩旁的鼓藝是呼應千百年來禮樂相傳的敬意，隱身其中的文創藝術有著溫和的態度，走入飯店，皆是藏於細節中的心意。</p>
-          <p>秉持著與在地共生共榮的品牌精神，將溫厚的歷史氛圍與書院文化融於旅宿空間之中，謹以『文風再現‧創藝傳承』作為使命，承襲府城首學的風範與驕傲，感念舊世代的智慧，期許在新時代的文化裡共同努力，為旅人們創造豐富、滿足的住宿體驗！</p>
-        </div>
-        <div class="reward-detail-highlight text-center">
-          <p>優 惠 期 間：<span>2016年01月01日至2016年12月31日</span></p>
-          <p>優 惠 方 式：<span>洋式山景套房平日入住享優惠價NT$9,699(一泊二食)</span></p>
+        <div class="reward-detail-note">
+          <p>優 惠 方 式：</p><p>洋式山景套房平日入住享優惠價NT$9,699(一泊二食)</p>
         </div>
         <div class="reward-notes">
           <h3>專案內容</h3>

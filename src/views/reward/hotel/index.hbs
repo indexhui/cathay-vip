@@ -1,101 +1,16 @@
 {{> ../../partials/header loggedIn=true}}
 <div class="container">
   <div>
-    <div class="reward-title">
-      <h2>V.I.P 住宿兌換</h2>
-    </div>
     <div class="reward-listing row">
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-4 col-lg-3 reward-item">
-        <a class="reward-item-img" href="./step1.html">
-          <img src="https://placehold.it/400x400" >
-        </a>
-        <div class="reward-item-name">
-          宜蘭 礁溪老爺大酒店
-        </div>
-        <div class="reward-item-description">
-          洋式山景套房平日入住享優惠NT$9,699(一泊二食)
-        </div>
-      </div>
+      {{> ../components/rewardItem name="宜蘭 礁溪老爺大酒店" description="洋式山景套房平日入住享優惠NT$9,699(一泊二食)"}}
+      {{> ../components/rewardItem name="宜蘭 礁溪老爺大酒店" description="洋式山景套房平日入住享優惠NT$9,699(一泊二食)"}}
+      {{> ../components/rewardItem name="宜蘭 礁溪老爺大酒店" description="洋式山景套房平日入住享優惠NT$9,699(一泊二食)"}}
+      {{> ../components/rewardItem name="宜蘭 礁溪老爺大酒店" description="洋式山景套房平日入住享優惠NT$9,699(一泊二食)"}}
+      {{> ../components/rewardItem name="宜蘭 礁溪老爺大酒店" description="洋式山景套房平日入住享優惠NT$9,699(一泊二食)"}}
+      {{> ../components/rewardItem name="宜蘭 礁溪老爺大酒店" description="洋式山景套房平日入住享優惠NT$9,699(一泊二食)"}}
     </div>
     <div class="row reward-footer">
-      <div class="col-xs-12 col-md-4 col-md-push-8 col-lg-6 col-lg-push-6">
+      <div class="col-xs-12">
       <!-- Paginator
         目前每頁八個項目
         若小於八個項目，就不用出現
@@ -103,17 +18,17 @@
         本頁頁碼加上 .current
       -->
         <div class="reward-paginator">
-          <span class="paginator-arrow paginator-prev glyphicon glyphicon-triangle-left"></span>
+          <span class="paginator-arrow paginator-prev fa fa-caret-left"></span>
           <span class="paginator-pages">
             <span class="paginator current">1</span>
             <span class="paginator">2</span>
             <span class="paginator">3</span>
             <span class="paginator">4</span>
           </span>
-          <span class="paginator-arrow paginator-next paginator-active glyphicon glyphicon-triangle-right"></span>
+          <span class="paginator-arrow paginator-next paginator-active fa fa-caret-right"></span>
         </div>
       </div>
-      <div class="col-xs-12 col-md-8 col-md-pull-4 col-lg-6 col-lg-pull-6">
+      <div class="col-xs-12">
         <p class="reward-legal-note">
           本網站之優惠及服務係由肯驛國際所提供，客戶對所提供之優惠及服務有任何爭議，或所有交易相關事項，由肯驛國際及合作商店負責處理。<br> Copyright © 2016 CanLead International All Rights Reserved. ｜ 隱私權聲明
         </p>

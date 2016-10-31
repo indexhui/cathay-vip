@@ -1,8 +1,12 @@
 <!-- FOOTER START -->
-<div class="footer">
-    <div class="container">
+<div class="container">
+    {{#if noLine}}
+    <div class="footer no-line">
+    {{else}}
+    <div class="footer">
+    {{/if}}
         <div class="footer-left">
-            <p>Copyright © 國泰人壽保險股份有限公司</p>
+            <small>Copyright © 國泰人壽保險股份有限公司</small>
         </div>
         <div class="footer-right">
             <div class="footer-nav">
@@ -18,7 +22,7 @@
 <script src="/scripts/vendors/jquery.min.js"></script>
 <script src="/scripts/vendors/moment.min.js"></script>
 <script src="/scripts/vendors/combodate.js"></script>
-<script src="/scripts/vendors/jquery-scrolltofixed-min.js"></script>
+<script src="/scripts/vendors/flatpickr.min.js"></script>
 <script src="/scripts/main.js"></script>
 </body>
 </html>

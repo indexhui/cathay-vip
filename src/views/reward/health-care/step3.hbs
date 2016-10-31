@@ -1,0 +1,32 @@
+{{> ../../partials/header loggedIn=true}}
+{{> ../components/stepper name="設施" step=3}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="reward-detail margin-top-extra">
+        <form class="reward-data form-horizontal">
+          {{> ../components/memberData}}
+          {{> ../components/reserverData}}
+          {{#> ../components/form/dropdown id="type" label="健檢品項"}}
+            <option>品項1</option>
+            <option>品項2</option>
+          {{/../components/form/dropdown}}
+
+          <div class="reward-detail-highlight text-left margin-extra">
+            <div class="reward-detail-row">
+              <span class="reward-detail-data">國泰醫院</span>
+            </div>
+          </div>
+          {{> ../components/calendar}}
+        </form>
+        <div class="reward-action text-center">
+          <a class="btn btn-square btn-main btn-wide" href="./step4.html">下一步</a>
+          <a class="btn btn-square btn-sub btn-wide" href="./">取消</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{> ../../partials/footer}}

@@ -8,6 +8,11 @@
 	padding: 2em 0;
 }
 
+.captcha-pic {
+	height: 2.3em;
+	width: 100%;
+}
+
 .combodate {
 	select {
 		@extend .form-control;

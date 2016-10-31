@@ -1,13 +1,24 @@
-$icon-font-path: "/src/bootstrap-sass/assets/fonts/bootstrap/";
-// bower:scss
-@import "../bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+$icon-font-path: '/src/bootstrap-sass/assets/fonts/bootstrap/';
+$grid-float-breakpoint: 1px;
 
 $dark-green: #19464B;
 $light-green: #0F91A5;
-$gray: #A3B5B7;
+$dark-gray: #A3B5B7;
+$gray: #C6C6C5;
 $light-gray: #ECECEC;
 $orange: #E95A0C;
+
+@import '../bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+$font-family: 'Noto Sans TC', sans-serif;
+$serif: 'Lora', serif;
+
+$heading1: 2.2em;
+$heading2: 1.6em;
+$heading3: 1.2em;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -19,19 +30,35 @@ $orange: #E95A0C;
 body {
   padding: 0;
   color: $dark-green;
-  font-family: sans-serif;
+  font-family: $font-family;
+  font-size: 90%;
+}
+
+@media screen and (min-width: $screen-sm) and (max-width: $screen-md-max) {
+  body {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  body {
+    font-size: 140%;
+  }
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: $heading1;
+  line-height: 1;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: $heading2;
+  line-height: 1;
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: $heading3;
+  line-height: 1;
 }
 
 img {
@@ -47,12 +74,14 @@ a:hover, a:focus {
   color: $dark-green;
 }
 
-/* Responsive: Portrait tablets and up */
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1240px;
   }
 }
+
+@import './vendor/flatpickr.min.css';
+@import './vendor/animate.css';
 
 @import './components/components';
 @import './partials/header';

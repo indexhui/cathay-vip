@@ -1,11 +1,13 @@
 'use strict';
 
-const Path = require('path')
-const Webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Path = require('path');
+const Webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ExtractSASS = new ExtractTextPlugin('styles/bundle.css');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const glob = require('glob');
+const autoprefixer = require('autoprefixer');
 
 module.exports = (options) => {
 
@@ -26,54 +28,30 @@ module.exports = (options) => {
           NODE_ENV: JSON.stringify(options.isProduction ? 'production' : 'development')
         }
       }),
-      new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: './src/views/index.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'login/index.html',
-        template: './src/views/login.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/index.html',
-        template: './src/views/reward/index.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/hotel/index.html',
-        template: './src/views/reward/hotel/index.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/hotel/step1.html',
-        template: './src/views/reward/hotel/step1.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/hotel/step2.html',
-        template: './src/views/reward/hotel/step2.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/hotel/step3.html',
-        template: './src/views/reward/hotel/step3.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/hotel/step4.html',
-        template: './src/views/reward/hotel/step4.hbs'
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'reward/hotel/step5.html',
-        template: './src/views/reward/hotel/step5.hbs'
-      }),
       new CopyWebpackPlugin([
         { from: './src/scripts', to: 'scripts' },
         { from: './src/images', to: 'images' },
       ])
-    ],
+    ].concat(glob.sync('./src/views/**/*.hbs', {
+      ignore: [
+        './src/views/partials/**',
+        './src/views/*/components/**'
+      ]
+    }).map(template => {
+        const filename = template.replace('./src/views/', '').replace('hbs', 'html');
+        return new HtmlWebpackPlugin({
+          filename,
+          template,
+        });
+      })
+    ),
     module: {
       loaders: [{
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ['es2015']
+          presets: ['es2015', 'stage-2']
         }
       }, {
         test: /\.hbs$/,
@@ -82,7 +60,8 @@ module.exports = (options) => {
         test: /\.(jpg|png|git|eot|svg|ttf|woff|woff2)$/,
         loader: 'file-loader?name=[path][name].[ext]?[hash]'
       }]
-    }
+    },
+    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
   };
 
   if (options.isProduction) {
@@ -99,6 +78,9 @@ module.exports = (options) => {
     );
 
     webpackConfig.module.loaders.push({
+      test: /\.css$/i,
+      loader: ExtractSASS.extract(['css'])
+    }, {
       test: /\.scss$/i,
       loader: ExtractSASS.extract(['css', 'sass'])
     });
@@ -109,6 +91,9 @@ module.exports = (options) => {
     );
 
     webpackConfig.module.loaders.push({
+      test: /\.css$/i,
+      loaders: ['style', 'css']
+    }, {
       test: /\.scss$/i,
       loaders: ['style', 'css', 'sass']
     }, {
@@ -125,7 +110,5 @@ module.exports = (options) => {
       progress: true
     };
   }
-
   return webpackConfig;
-
-}
+};

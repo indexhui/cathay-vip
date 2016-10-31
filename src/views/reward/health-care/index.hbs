@@ -1,0 +1,39 @@
+{{> ../../partials/header loggedIn=true}}
+<div class="container">
+  <div>
+    <div class="reward-listing row">
+      {{> ../components/rewardItem name="國泰醫院" description="高級健檢，為您的健康把關"}}
+      {{> ../components/rewardItem name="國泰醫院" description="高級健檢，為您的健康把關"}}
+      {{> ../components/rewardItem name="國泰醫院" description="高級健檢，為您的健康把關"}}
+      {{> ../components/rewardItem name="國泰醫院" description="高級健檢，為您的健康把關"}}
+      {{> ../components/rewardItem name="國泰醫院" description="高級健檢，為您的健康把關"}}
+      {{> ../components/rewardItem name="國泰醫院" description="高級健檢，為您的健康把關"}}
+    </div>
+    <div class="row reward-footer">
+      <div class="col-xs-12">
+      <!-- Paginator
+        目前每頁八個項目
+        若小於八個項目，就不用出現
+        有上頁或下頁時，.paginator-arrow 加上 .active
+        本頁頁碼加上 .current
+      -->
+        <div class="reward-paginator">
+          <span class="paginator-arrow paginator-prev fa fa-caret-left"></span>
+          <span class="paginator-pages">
+            <span class="paginator current">1</span>
+            <span class="paginator">2</span>
+            <span class="paginator">3</span>
+            <span class="paginator">4</span>
+          </span>
+          <span class="paginator-arrow paginator-next paginator-active fa fa-caret-right"></span>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <p class="reward-legal-note">
+          本網站之優惠及服務係由肯驛國際所提供，客戶對所提供之優惠及服務有任何爭議，或所有交易相關事項，由肯驛國際及合作商店負責處理。<br> Copyright © 2016 CanLead International All Rights Reserved. ｜ 隱私權聲明
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{{> ../../partials/footer}}

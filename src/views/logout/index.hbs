@@ -1,0 +1,18 @@
+{{> ../partials/header noLogin=true}}
+<div class="container">
+	<div class="login-wrapper">
+	    <div class="row">
+	    	<div class="login-header">
+	        	<h2>確認登出</h2>
+	        </div>
+	        <!-- 登出後導回首頁 -->
+	        <form action="/" id="member-login" class="reward-data">
+                {{>../reward/components/form/captcha}}
+	            <div class="form-group">
+	            	<input type="submit" class="btn btn-square btn-main btn-full-width" value="登出">
+	            </div>
+	        </form>
+	    </div>
+    </div>
+</div>
+{{> ../partials/footer}}

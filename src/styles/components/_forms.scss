@@ -14,14 +14,14 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: transparentize($orange, 0.6);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px transparentize($orange, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px transparentize($light-green, 0.6);
   outline: 0 none;
 }
 
 .form-control {
   border-radius: 0;
   border-color: $gray;
+  color: $dark-green;
 }
 
 .form-horizontal {
@@ -30,3 +30,28 @@ input[type="color"]:focus,
   }
 }
 
+.form-note {
+	margin-top: 0.2em;
+}
+
+.field-wrapper {
+	position: relative;
+	padding-top: 1.4em;
+	margin-bottom: 1em;
+	label {
+		position: absolute;
+		top: 0;
+		font-size: 0.8em;
+	}
+	.form-control-feedback {
+		top: 1.4em;
+	}
+}
+
+.flatpickr-day.today:focus, .flatpickr-day.today:hover {
+	border-color: $dark-green;
+}
+
+.flatpickr-day.selected, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.selected:focus, .flatpickr-day.selected:hover {
+	border-color: $light-green;
+}

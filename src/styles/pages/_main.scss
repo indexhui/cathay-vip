@@ -1,4 +1,10 @@
+.main-page {
+  height: 0;
+  padding-bottom: 50%;
+}
+
 .slogan {
+  margin-top: 6em;
   h1 {
     font-size: 6em;
   }
@@ -6,6 +12,7 @@
 
 .all-caps {
   text-transform: uppercase;
+  font-family: $serif;
 }
 
 .home-nav {
@@ -15,17 +22,43 @@
     margin: 0;
     padding: 0;
     li {
-      display: block;
-      margin-bottom: 2em;
+      display: inline-block;
       font-size: 1.2em;
       a {
-        color: black;
+        color: $light-green;
         text-decoration: none;
         transition: color 0.5s ease;
       }
       a:hover {
-        color: $gray;
+        color: $dark-gray;
       }
     }
+
+    li + li:before {
+      content: '|';
+      margin: 0 1em;
+    }
   }
+}
+
+.login-content {
+  margin-top: 6em;
+}
+
+.cover-image-wrapper {
+  width: 55%;
+  padding-top: 50%;
+  min-height: 1px;
+  position: absolute;
+  right: 0;
+}
+
+.cover-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: url(/images/cover.jpg);
+  background-size: cover;
 }

@@ -1,0 +1,16 @@
+<div class="margin-bottom-large">
+  <h3>會員基本資料</h3>
+</div>
+<!-- 自動帶入會員資料 -->
+<!-- 且每次送出之後，同步更新回去資料庫 -->
+<div class="form-group">
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="member-name" label="姓名" value="自動帶入"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="member-phone" label="手機" value="自動帶入"}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="member-email" label="信箱" value="自動帶入"}}
+  </div>
+</div>

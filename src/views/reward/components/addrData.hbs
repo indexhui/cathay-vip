@@ -1,0 +1,32 @@
+<div class="margin-top-large">
+  <h3>接送地址</h3>
+</div>
+<div class="form-group">
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="shuttle-type" label="服務類型"}}
+      <option value="接機">接機</option>
+      <option value="送機">送機</option>
+    {{/form/dropdown}}
+  </div>
+</div>
+<div class="addr-fields form-group">
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="city" label="選擇縣市"}}
+      <option>縣市</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{#>form/dropdown id="region" label="鄉鎮市區"}}
+      <option>鄉政市區</option>
+    {{/form/dropdown}}
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    {{>form/text id="address" label="地址"}}
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-xs-12">
+    <button id="more-addr" class="btn btn-main btn-square btn-full-width"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;&nbsp;新增加點服務</button>
+    {{>form/note note="加點服務如有跨縣市之需求，請洽客服專線:04-22-6-465"}}
+  </div>
+</div>

@@ -1,12 +1,16 @@
-$grid-float-breakpoint: 1px;
-
 .header {
-  margin-bottom: 10px;
+  position: relative;
+  height: 5em;
+  font-family: $serif;
 }
 
 .navbar {
   padding: 1em 0;
   border-radius: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  min-height: 1px;
 }
 
 .navbar-light {
@@ -24,8 +28,6 @@ $grid-float-breakpoint: 1px;
 }
 
 .navbar-logo {
-  font-size: 1em;
-
   img {
     height: 3em;
     width: auto;
@@ -33,10 +35,15 @@ $grid-float-breakpoint: 1px;
 }
 
 .navbar-nav {
+  margin: 0;
   li {
     font-size: 1em;
+    a {
+      line-height: 1em;
+      padding: 1em;
+    }
     a.btn {
-      padding: 6px 12px;
+      padding: 1em;
     }
   }
 }
