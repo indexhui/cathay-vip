@@ -3,15 +3,20 @@
 </div>
 <div class="form-group">
   <div class="col-xs-12 col-sm-4">
-    {{>form/text id="user-name" label="姓名"}}
+    {{>form/text id="user-name" label="使用人姓名"}}
   </div>
   <div class="col-xs-12 col-sm-4">
-    {{>form/text id="user-phone" label="手機"}}
+    {{>form/text id="user-phone" label="使用人手機"}}
   </div>
+  <!-- 若勾選同會員資料，自動設定關係為本人 -->
   <div class="col-xs-12 col-sm-4">
     {{#>form/dropdown id="user-relation" label="關係"}}
-      <option value="1">本人</option>
-      <option value="2">家人</option>
+      <option>本人</option>
+      <option>配偶</option>
+      <option>父母</option>
+      <option>子女</option>
+      <option>配偶父母</option>
+      <option>其他</option>
     {{/form/dropdown}}
   </div>
   <div class="col-xs-12">

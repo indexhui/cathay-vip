@@ -8,10 +8,14 @@ $gray: #C6C6C5;
 $light-gray: #ECECEC;
 $orange: #E95A0C;
 
-@import '../bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+$google-font-path: '/src/styles/fonts';
+$fa-font-path: '/src/font-awesome-4.7.0/fonts';
 
-@import url(https://fonts.googleapis.com/css?family=Lora);
-@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import '../bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../font-awesome-4.7.0/scss/font-awesome.scss';
+
+@import 'fonts/lora';
+@import 'fonts/notosans';
 
 $font-family: 'Noto Sans TC', sans-serif;
 $serif: 'Lora', serif;

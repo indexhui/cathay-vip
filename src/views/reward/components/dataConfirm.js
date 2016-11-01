@@ -1,12 +1,12 @@
 const userData = [
 	{
 		data: 'user-name',
-		label: '姓名',
+		label: '使用人姓名',
 		value: '使用人姓名',
 	},
 	{
 		data: 'user-phone',
-		label: '手機',
+		label: '使用人手機',
 		value: '使用人手機',
 	},
 	{

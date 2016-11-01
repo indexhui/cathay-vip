@@ -20,6 +20,7 @@ module.exports = (options) => {
     ],
     output: {
       path: Path.join(__dirname, 'dist'),
+      publicPath: options.isProduction ? './' : '/',
       filename: 'bundle.js'
     },
     plugins: [
@@ -57,7 +58,7 @@ module.exports = (options) => {
         test: /\.hbs$/,
         loader: 'handlebars-loader'
       }, {
-        test: /\.(jpg|png|git|eot|svg|ttf|woff|woff2)$/,
+        test: /\.(jpg|png|git|eot|svg|ttf|woff|woff2|otf)$/,
         loader: 'file-loader?name=[path][name].[ext]?[hash]'
       }]
     },

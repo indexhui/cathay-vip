@@ -1,18 +1,23 @@
-$reward-image-width: 60%;
+$reward-image-width: 50%;
+
+.reward-detail-img-wrapper {
+  min-height: 25vw;
+}
 
 .reward-detail-img {
   width: $reward-image-width;
-  float: left;
+  position: absolute;
 }
 
 .reward-detail-description {
-  width: 100% -$reward-image-width;
-  float: left;
   padding: 0 1em;
   text-align: justify;
   h2 {
     margin-bottom: 2em;
     font-family: $serif;
+  }
+  .learn-more {
+    margin-top: 2em;
   }
 }
 
