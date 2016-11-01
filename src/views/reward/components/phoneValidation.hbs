@@ -7,6 +7,13 @@
     <button id="cell-validation-submit" class="btn btn-main btn-square">確認</button>
   </div>
 </form>
+{{#if additional}}
 <div class="cell-validation-ok hidden">
-  已經確認完成預約！
+  <p>已經完成預約申請！</p>
+  <p>客服人員將於兩個工作天內與您確認預約狀況，敬請耐心等候。</p>
 </div>
+{{else}}
+<div class="cell-validation-ok hidden">
+  <p>已經確認完成預約！</p>
+</div>
+{{/if}}
