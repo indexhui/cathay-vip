@@ -23,10 +23,10 @@
                         <h2>VIP Login</h2>
                     </div>
                     <!-- 確認登入後，導向/reward -->
-                    <form id="member-login" class="reward-data" action="reward/">
+                    <form id="member-login" class="form-horizontal" action="reward/">
                         {{>reward/components/form/text id="member-name" label="姓名"}}
                         {{>reward/components/form/text id="member-id" label="身分證字號"}}
-                        {{>reward/components/form/text id="member-birthday" label="生日"}}
+                        {{>reward/components/form/birthday id="member-birthday" label="生日"}}
                         {{>reward/components/form/captcha}}
                         <div class="form-group">
                             <input type="submit" class="btn btn-square btn-main btn-full-width" value="登入">

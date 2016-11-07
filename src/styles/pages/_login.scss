@@ -8,35 +8,48 @@
 	padding: 2em 0;
 }
 
+#member-login {
+	.form-group {
+		margin: 0;
+	}
+}
+
 .captcha-pic {
 	height: 2.3em;
 	width: 100%;
 }
 
-.combodate {
-	select {
-		@extend .form-control;
-		&.year {
-			width: 100% !important;
-			display: block;
-		}
-		&.month, &.day {
-			width: 48% !important;
-			display: inline-block;
-			margin-top: 15px;
-		}
-		&.day {
-			margin-left: 4%;
-		}
-		@media screen and (min-width: $screen-sm) {
-			&.year, &.month, &.day {
-				width: 30% !important;
-				display: inline-block;
-			}
-			&.month, &.day {
-				margin-top: 0;
-				margin-left: 5%;
-			}
-		}
+.birthday-dropdown {
+	height: 2em;
+	&:before, &:after {
+		content: '';
+		display: table;
 	}
 }
+
+.member-birthday-year {
+	width: 100% !important;
+	float: left;
+}
+
+.member-birthday-month, .member-birthday-day {
+	width: 48% !important;
+	float: left;
+	margin-top: 15px;
+}
+
+.member-birthday-day {
+	margin-left: 4%;
+}
+
+@media screen and (min-width: $screen-sm) {
+	.member-birthday-year, .member-birthday-month, .member-birthday-day {
+		width: 30% !important;
+	}
+	.member-birthday-month, .member-birthday-day {
+		margin-top: 0;
+		margin-left: 5%;
+	}
+}
+
+
